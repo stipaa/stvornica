@@ -1,17 +1,92 @@
-.logo {
-    width: 150px;
-    display: block;
+/* GLOBAL */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #111;
+    line-height: 1.6;
+  }
+  
+  /* HERO SEKCIJA */
+  .hero {
+    padding: 4rem 1rem;
+    background-color: #f9f9f9;
+  }
+  
+  .hero-top {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .logo {
+    width: 120px;
     margin: 0 auto 1rem;
+    display: block;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 0.5rem;
+  }
+  
+  .hero-image-wrap {
+    display: flex;
+    justify-content: center;
   }
   
   .hero-image {
     width: 100%;
-    max-width: 960px;
-    height: auto;
+    max-width: 800px;
     border-radius: 12px;
-    display: block;
-    margin: 2rem auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-top: 2rem;
   }
+  
+  /* SEKCIJE */
+  section {
+    padding: 4rem 1rem;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  ul {
+    padding-left: 1.2rem;
+  }
+  
+  ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* FOOTER */
+  footer.contact {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #f0f0f0;
+  }
+  
+  footer.contact a {
+    color: #111;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  footer.contact a:hover {
+    color: #4ecdc4;
+  }
+  
+  /* SOCIAL IKONE */
   .social-icons {
     margin-top: 1.5rem;
     display: flex;
@@ -29,5 +104,6 @@
   .social-icons a:hover svg {
     fill: #4ecdc4;
   }
+  
   
   
