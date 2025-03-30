@@ -19,14 +19,15 @@
     gap: 1.5rem;
   }
   
-  .social-icons a {
-    font-size: 1.5rem;
-    color: #333;
-    text-decoration: none;
-    transition: color 0.3s ease;
+  .social-icons a svg {
+    width: 28px;
+    height: 28px;
+    fill: #333;
+    transition: fill 0.3s ease;
   }
   
-  .social-icons a:hover {
-    color: #4ecdc4;
+  .social-icons a:hover svg {
+    fill: #4ecdc4;
   }
+  
   
