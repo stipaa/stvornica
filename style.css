@@ -1,0 +1,15 @@
+.logo {
+    width: 150px;
+    display: block;
+    margin: 0 auto 1rem;
+  }
+  
+  .hero-image {
+    width: 100%;
+    max-width: 960px;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin: 2rem auto;
+  }
+  
