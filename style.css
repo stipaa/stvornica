@@ -58,8 +58,8 @@ body {
   .nav-toggle {
     display: none;
     flex-direction: column;
-    cursor: pointer;
     gap: 5px;
+    cursor: pointer;
   }
   
   .nav-toggle span {
@@ -90,6 +90,7 @@ body {
       display: flex;
     }
   }
+  
   
   /* HERO */
   .hero {
