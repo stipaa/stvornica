@@ -16,7 +16,9 @@
     <div class="nav-container">
       <a href="#hero" class="nav-logo">STvornica</a>
       <div class="nav-toggle" id="navToggle">
-        <span></span><span></span><span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
       <ul class="nav-menu" id="navMenu">
         <li><a href="#hero">Home</a></li>
@@ -28,6 +30,7 @@
       </ul>
     </div>
   </nav>
+  
 
   <!-- HERO section -->
   <header class="hero" id="hero">
@@ -67,6 +70,13 @@
         <p>Design and digital clarity make the difference between noise and impact.</p>
         <a href="#" class="read-more">Read more →</a>
       </article>
+      <article class="blog-post">
+        <h3>Designing for Gen Z: What actually matters</h3>
+        <p class="blog-date">February 2025</p>
+        <p>Authenticity beats perfection. Here’s how to rethink your visual strategy for the new wave of consumers.</p>
+        <a href="#" class="read-more">Read more →</a>
+      </article>
+      
     </div>
   </section>
 
@@ -112,10 +122,12 @@
   <script>
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
+  
     navToggle.addEventListener('click', () => {
       navMenu.classList.toggle('active');
     });
   </script>
+  
 </body>
 </html>
 
