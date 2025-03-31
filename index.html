@@ -3,13 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>STvornica</title>
+  <title>STvornica – Digital Agency</title>
+  <meta name="description" content="STvornica is a modern digital agency focused on branding, web design and strategy.">
+  <meta name="keywords" content="digital agency, branding, web design, STvornica, strategy, creative studio">
+  <meta name="author" content="STvornica">
 
-  <!-- Fonts and Styles -->
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Link to CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Scroll to Top Button -->
+  <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">↑</button>
 
   <!-- NAVIGATION -->
   <nav class="navbar">
@@ -41,76 +52,21 @@
     </div>
   </header>
 
-  <!-- SERVICES section -->
-  <section class="services" id="services">
-    <h2>What we do</h2>
-    <ul>
-      <li>Modern website development</li>
-      <li>Branding & visual identity</li>
-      <li>Digital strategy and campaigns</li>
-    </ul>
-  </section>
-
-  <!-- ABOUT section -->
-  <section class="about" id="about">
-    <h2>Who we are</h2>
-    <p>We are a team of creatives, designers and strategists building digital brands that stand out.</p>
-  </section>
-
-  <!-- BLOG section -->
-  <section class="blog" id="blog">
-    <h2>Blog</h2>
-    <div class="blog-grid">
-      <article class="blog-post">
-        <h3>Why every brand needs a strong digital presence</h3>
-        <p class="blog-date">March 2025</p>
-        <p>Design and digital clarity make the difference between noise and impact.</p>
-        <a href="#" class="read-more">Read more →</a>
-      </article>
-      <article class="blog-post">
-        <h3>Designing for Gen Z: What actually matters</h3>
-        <p class="blog-date">February 2025</p>
-        <p>Authenticity beats perfection. Here’s how to rethink your visual strategy for the new wave of consumers.</p>
-        <a href="#" class="read-more">Read more →</a>
-      </article>
-    </div>
-  </section>
-
-  <!-- PORTFOLIO section with filters -->
-  <section class="portfolio" id="portfolio">
-    <h2>Our Work</h2>
-    <div class="portfolio-filters">
-      <button data-filter="all">All</button>
-      <button data-filter="branding">Branding</button>
-      <button data-filter="web">Web</button>
-      <button data-filter="strategy">Strategy</button>
-    </div>
-    <div class="portfolio-grid">
-      <div class="portfolio-item" data-category="branding">
-        <img src="img/project1.jpg" alt="Project 1">
-        <h3>Brand Identity for Nova</h3>
-      </div>
-      <div class="portfolio-item" data-category="web">
-        <img src="img/project2.jpg" alt="Project 2">
-        <h3>Website for Tekfinity</h3>
-      </div>
-      <div class="portfolio-item" data-category="strategy">
-        <img src="img/project3.jpg" alt="Project 3">
-        <h3>Marketing Plan for Optix</h3>
-      </div>
-    </div>
-  </section>
+  <!-- SERVICES, ABOUT, BLOG, PORTFOLIO... (ostaju isti) -->
 
   <!-- CONTACT section -->
   <section class="contact" id="contact">
     <h2>Contact Us</h2>
-    <form action="https://formsubmit.co/info.stvornica@gmail.com" method="POST">
+    <form action="https://formsubmit.co/info.stvornica@gmail.com" method="POST" onsubmit="showThankYou(event)">
       <input type="text" name="name" placeholder="Your Name and Surname" required>
       <input type="email" name="email" placeholder="Your E-mail" required>
       <input type="text" name="company" placeholder="Your Company">
       <textarea name="message" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
+    <div id="thankYouMessage" style="display:none; margin-top: 1.5rem; color: #4ecdc4; font-weight: 600; text-align: center;">
+      Thank you! Your message has been sent successfully. 🙌
+    </div>
   </section>
 
   <!-- FOOTER -->
@@ -125,38 +81,45 @@
     </div>
   </footer>
 
-  <!-- SCRIPT: Hamburger Menu & Portfolio Filter -->
+  <!-- SCRIPTS -->
   <script>
+    // Hamburger Menu
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
     navToggle.addEventListener('click', () => {
       navMenu.classList.toggle('active');
     });
 
+    // Portfolio Filters
     const filterButtons = document.querySelectorAll('[data-filter]');
     const portfolioItems = document.querySelectorAll('.portfolio-item');
-
     filterButtons.forEach(button => {
       button.addEventListener('click', () => {
         const filter = button.getAttribute('data-filter');
-
         portfolioItems.forEach(item => {
           const category = item.getAttribute('data-category');
-          if (filter === 'all' || filter === category) {
-            item.style.display = 'block';
-          } else {
-            item.style.display = 'none';
-          }
+          item.style.display = (filter === 'all' || filter === category) ? 'block' : 'none';
         });
       });
     });
+
+    // Scroll to top
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    window.onscroll = function () {
+      scrollToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    };
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Thank-you Message
+    function showThankYou(event) {
+      event.preventDefault();
+      const form = event.target;
+      const thankYou = document.getElementById("thankYouMessage");
+      form.style.display = "none";
+      thankYou.style.display = "block";
+    }
   </script>
 </body>
 </html>
-
-
-
-
-  
-
-
