@@ -16,9 +16,7 @@
     <div class="nav-container">
       <a href="#hero" class="nav-logo">STvornica</a>
       <div class="nav-toggle" id="navToggle">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </div>
       <ul class="nav-menu" id="navMenu">
         <li><a href="#hero">Home</a></li>
@@ -30,7 +28,6 @@
       </ul>
     </div>
   </nav>
-  
 
   <!-- HERO section -->
   <header class="hero" id="hero">
@@ -76,21 +73,30 @@
         <p>Authenticity beats perfection. Here’s how to rethink your visual strategy for the new wave of consumers.</p>
         <a href="#" class="read-more">Read more →</a>
       </article>
-      
     </div>
   </section>
 
-  <!-- PORTFOLIO section -->
+  <!-- PORTFOLIO section with filters -->
   <section class="portfolio" id="portfolio">
     <h2>Our Work</h2>
+    <div class="portfolio-filters">
+      <button data-filter="all">All</button>
+      <button data-filter="branding">Branding</button>
+      <button data-filter="web">Web</button>
+      <button data-filter="strategy">Strategy</button>
+    </div>
     <div class="portfolio-grid">
-      <div class="portfolio-item">
+      <div class="portfolio-item" data-category="branding">
         <img src="img/project1.jpg" alt="Project 1">
         <h3>Brand Identity for Nova</h3>
       </div>
-      <div class="portfolio-item">
+      <div class="portfolio-item" data-category="web">
         <img src="img/project2.jpg" alt="Project 2">
         <h3>Website for Tekfinity</h3>
+      </div>
+      <div class="portfolio-item" data-category="strategy">
+        <img src="img/project3.jpg" alt="Project 3">
+        <h3>Marketing Plan for Optix</h3>
       </div>
     </div>
   </section>
@@ -98,9 +104,10 @@
   <!-- CONTACT section -->
   <section class="contact" id="contact">
     <h2>Contact Us</h2>
-    <form action="https://formspree.io/f/yourcode" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
+    <form action="https://formsubmit.co/info.stvornica@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name and Surname" required>
+      <input type="email" name="email" placeholder="Your E-mail" required>
+      <input type="text" name="company" placeholder="Your Company">
       <textarea name="message" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
@@ -118,18 +125,35 @@
     </div>
   </footer>
 
-  <!-- SCRIPT: Hamburger Menu -->
+  <!-- SCRIPT: Hamburger Menu & Portfolio Filter -->
   <script>
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
-  
     navToggle.addEventListener('click', () => {
       navMenu.classList.toggle('active');
     });
+
+    const filterButtons = document.querySelectorAll('[data-filter]');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const filter = button.getAttribute('data-filter');
+
+        portfolioItems.forEach(item => {
+          const category = item.getAttribute('data-category');
+          if (filter === 'all' || filter === category) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
   </script>
-  
 </body>
 </html>
+
 
 
 
