@@ -91,7 +91,6 @@ body {
     }
   }
   
-  
   /* HERO */
   .hero {
     padding: 4rem 1rem;
@@ -147,7 +146,6 @@ body {
     text-align: center;
   }
   
-  /* SERVICES & ABOUT */
   ul {
     padding-left: 1.2rem;
   }
@@ -198,6 +196,27 @@ body {
   }
   
   /* PORTFOLIO */
+  .portfolio-filters {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .portfolio-filters button {
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border: none;
+    background-color: #eee;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .portfolio-filters button:hover {
+    background-color: #4ecdc4;
+    color: #fff;
+  }
+  
   .portfolio-grid {
     display: grid;
     gap: 2rem;
@@ -233,6 +252,12 @@ body {
     border: 1px solid #ccc;
     font-size: 1rem;
     font-family: inherit;
+    width: 100%;
+  }
+  
+  .contact textarea {
+    resize: vertical;
+    min-height: 150px;
   }
   
   .contact button {
