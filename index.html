@@ -197,6 +197,15 @@
       form.style.display = "none";
       thankYou.style.display = "block";
     }
+
+    // Zatvori meni kad klikneš na link
+document.querySelectorAll('.nav-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+    navToggle.classList.remove('active');
+  });
+});
+
   </script>
 </body>
 </html>

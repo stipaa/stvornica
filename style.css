@@ -220,3 +220,110 @@ body {
   #scrollToTopBtn:hover {
     background-color: #38bfb1;
   }
+  
+  /* FULLSCREEN NAVIGATION */
+  .navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 1000;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  .nav-logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #111;
+    text-decoration: none;
+  }
+  
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1100;
+  }
+  
+  .nav-toggle span {
+    height: 3px;
+    width: 25px;
+    background: #111;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+  
+  .nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+    z-index: 100;
+  }
+  
+  .nav-menu.active {
+    transform: translateX(0);
+  }
+  
+  .nav-menu li {
+    list-style: none;
+    margin: 1rem 0;
+  }
+  
+  .nav-menu li a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #111;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  .nav-menu li a:hover {
+    color: #4ecdc4;
+  }
+  
+  @media (min-width: 768px) {
+    .nav-toggle {
+      display: none;
+    }
+    .nav-menu {
+      position: static;
+      height: auto;
+      width: auto;
+      background: transparent;
+      flex-direction: row;
+      transform: none !important;
+    }
+    .nav-menu li {
+      margin: 0 1rem;
+    }
+    .nav-menu li a {
+      font-size: 1rem;
+    }
+  }
