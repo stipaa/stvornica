@@ -4,41 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>STvornica – Digital Agency</title>
-  <meta name="description" content="STvornica is a modern digital agency focused on branding, web design and strategy.">
-  <meta name="keywords" content="digital agency, branding, web design, STvornica, strategy, creative studio">
+  <meta name="description" content="STvornica is a digital agency specializing in branding, web design, and creative strategy.">
+  <meta name="keywords" content="digital agency, web design, branding, STvornica, creative agency">
   <meta name="author" content="STvornica">
-
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-  <!-- Google Font -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- Link to CSS -->
   <link rel="stylesheet" href="style.css">
-  
-  <style>
-    #scrollToTopBtn {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background-color: #4ecdc4;
-      color: #fff;
-      border: none;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      font-size: 20px;
-      display: none;
-      cursor: pointer;
-      z-index: 999;
-      transition: background-color 0.3s ease;
-    }
-
-    #scrollToTopBtn:hover {
-      background-color: #38bfb1;
-    }
-  </style>
 </head>
 <body>
 
@@ -48,163 +19,106 @@
   <!-- NAVIGATION -->
   <nav class="navbar">
     <div class="nav-container">
-      <a href="#hero" class="nav-logo">STvornica</a>
+      <a href="#home" class="nav-logo">STvornica</a>
       <div class="nav-toggle" id="navToggle">
         <span></span><span></span><span></span>
       </div>
       <ul class="nav-menu" id="navMenu">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- HERO section -->
-  <header class="hero" id="hero">
-    <div class="hero-top">
-      <img src="img/logo.png" alt="STvornica logo" class="logo">
-      <h1>STvornica</h1>
-      <p>The digital agency of the future.</p>
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-overlay">
+      <video autoplay muted loop playsinline class="hero-video">
+        <source src="media/hero-video.mp4" type="video/mp4">
+        <img src="img/hero.jpg" alt="Futuristic digital scene">
+      </video>
+      <div class="hero-content">
+        <h1>STvornica</h1>
+        <p>The digital agency of the future.</p>
+        <a href="#services" class="scroll-down">↓ Scroll</a>
+      </div>
     </div>
-    <div class="hero-image-wrap">
-      <img src="img/hero.jpg" alt="Futuristic digital illustration" class="hero-image">
-    </div>
-  </header>
+  </section>
 
-  <!-- SERVICES section -->
+  <!-- SERVICES -->
   <section class="services" id="services">
-    <h2>What we do</h2>
+    <h2>What We Do</h2>
     <ul>
-      <li>Modern website development</li>
-      <li>Branding & visual identity</li>
-      <li>Digital strategy and campaigns</li>
+      <li>Modern Website Development</li>
+      <li>Branding & Visual Identity</li>
+      <li>Creative Strategy</li>
     </ul>
   </section>
 
-  <!-- ABOUT section -->
-  <section class="about" id="about">
-    <h2>Who we are</h2>
-    <p>We are a team of creatives, designers and strategists building digital brands that stand out.</p>
+  <!-- SOLUTIONS -->
+  <section class="solutions">
+    <h2>Solutions for Your Brand</h2>
+    <div class="solution-grid">
+      <div class="solution-card">Custom websites</div>
+      <div class="solution-card">Full rebranding</div>
+      <div class="solution-card">Digital campaigns</div>
+      <div class="solution-card">Performance consulting</div>
+    </div>
   </section>
 
-  <!-- BLOG section -->
-  <section class="blog" id="blog">
-    <h2>Blog</h2>
+  <!-- PARTNERS (VISIBLE IF >=3) -->
+  <section class="partners" id="partners">
+    <h2>Our Partners</h2>
+    <div class="partner-slider">
+      <div class="partner-track">
+        <img src="img/partner1.png" alt="Partner 1">
+        <img src="img/partner2.png" alt="Partner 2">
+        <img src="img/partner3.png" alt="Partner 3">
+        <img src="img/partner4.png" alt="Partner 4">
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA TO CONTACT -->
+  <section class="cta-contact">
+    <a href="contact.html" class="btn-contact">Contact Us</a>
+  </section>
+
+  <!-- BLOG PREVIEW (OPTIONAL) -->
+  <section class="blog-preview">
+    <h2>From Our Blog</h2>
     <div class="blog-grid">
       <article class="blog-post">
-        <h3>Why every brand needs a strong digital presence</h3>
-        <p class="blog-date">March 2025</p>
-        <p>Design and digital clarity make the difference between noise and impact.</p>
-        <a href="#" class="read-more">Read more →</a>
+        <h3>Designing for Gen Z</h3>
+        <p class="blog-date">Feb 2025</p>
+        <p>Authenticity beats perfection. Here's how to rethink your strategy.</p>
+        <a href="blog.html" class="read-more">Read more →</a>
       </article>
       <article class="blog-post">
-        <h3>Designing for Gen Z: What actually matters</h3>
-        <p class="blog-date">February 2025</p>
-        <p>Authenticity beats perfection. Here’s how to rethink your visual strategy for the new wave of consumers.</p>
-        <a href="#" class="read-more">Read more →</a>
+        <h3>Branding for Visibility</h3>
+        <p class="blog-date">Jan 2025</p>
+        <p>Why strong identity matters more than ever in digital.</p>
+        <a href="blog.html" class="read-more">Read more →</a>
       </article>
-    </div>
-  </section>
-
-  <!-- PORTFOLIO section -->
-  <section class="portfolio" id="portfolio">
-    <h2>Our Work</h2>
-    <div class="portfolio-filters">
-      <button data-filter="all">All</button>
-      <button data-filter="branding">Branding</button>
-      <button data-filter="web">Web</button>
-      <button data-filter="strategy">Strategy</button>
-    </div>
-    <div class="portfolio-grid">
-      <div class="portfolio-item" data-category="branding">
-        <img src="img/project1.jpg" alt="Project 1">
-        <h3>Brand Identity for Nova</h3>
-      </div>
-      <div class="portfolio-item" data-category="web">
-        <img src="img/project2.jpg" alt="Project 2">
-        <h3>Website for Tekfinity</h3>
-      </div>
-      <div class="portfolio-item" data-category="strategy">
-        <img src="img/project3.jpg" alt="Project 3">
-        <h3>Marketing Plan for Optix</h3>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT section -->
-  <section class="contact" id="contact">
-    <h2>Contact Us</h2>
-    <form action="https://formsubmit.co/info.stvornica@gmail.com" method="POST" onsubmit="showThankYou(event)">
-      <input type="text" name="name" placeholder="Your Name and Surname" required>
-      <input type="email" name="email" placeholder="Your E-mail" required>
-      <input type="text" name="company" placeholder="Your Company">
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <div id="thankYouMessage" style="display:none; margin-top: 1.5rem; color: #4ecdc4; font-weight: 600; text-align: center;">
-      Thank you! Your message has been sent successfully. 🙌
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p>&copy; 2025 STvornica. All rights reserved.</p>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/stvornica" target="_blank" aria-label="Instagram">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M7.75 2h8.5A5.75..."/>
-        </svg>
-      </a>
+    <div class="footer-content">
+      <p>&copy; 2025 STvornica. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/stvornica" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com/company/stvornica" target="_blank">LinkedIn</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </div>
     </div>
   </footer>
 
-  <!-- SCRIPTS -->
-  <script>
-    const navToggle = document.getElementById('navToggle');
-    const navMenu = document.getElementById('navMenu');
-    navToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-      navToggle.classList.toggle('active');
-    });
-
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        navToggle.classList.remove('active');
-      });
-    });
-
-    const filterButtons = document.querySelectorAll('[data-filter]');
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
-    filterButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const filter = button.getAttribute('data-filter');
-        portfolioItems.forEach(item => {
-          const category = item.getAttribute('data-category');
-          item.style.display = (filter === 'all' || filter === category) ? 'block' : 'none';
-        });
-      });
-    });
-
-    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-    window.onscroll = function () {
-      scrollToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
-    };
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function showThankYou(event) {
-      event.preventDefault();
-      const form = event.target;
-      const thankYou = document.getElementById("thankYouMessage");
-      form.style.display = "none";
-      thankYou.style.display = "block";
-    }
-  </script>
+  <!-- JAVASCRIPT -->
+  <script src="script.js"></script>
 </body>
 </html>
